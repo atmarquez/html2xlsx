@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>html2xlsx by Naidel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: system-ui, Arial, sans-serif;
+      margin: 0;
+      background: #0f1115;
+      color: #e5e7eb;
+    }
+    header {
+      background: #020617;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid #1e293b;
+    }
+    header h1 { margin: 0; font-size: 2.3rem; }
+    header p { margin-top: 0.5rem; color: #aab3c5; }
+
+    nav {
+      background: #020617;
+      padding: 0.6rem 1rem;
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      border-bottom: 1px solid #1e293b;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    section {
+      max-width: 1000px;
+      margin: 2.8rem auto;
+      padding: 0 1.6rem;
+    }
+
+    h2 {
+      border-left: 4px solid #6c5ce7;
+      padding-left: 0.7rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .card {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      padding: 1.4rem;
+      margin: 1rem 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #9ca3af;
+      border-top: 1px solid #1e293b;
+      background: #020617;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #6c5ce7;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 1.2rem;
+    }
+
+    .btn:hover { background: #5847db; }
+
+    code {
+      background: #111827;
+      padding: 0.1rem 0.3rem;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>html2xlsx</h1>
+  <p>Convierte documentos HTML en archivos Excel estructurados (.xlsx)</p>
+  <a class="btn" href="#download">Descargar</a>
+</header>
+
+<nav>
+  <a href="#about">¿Qué es?</a>
+  <a href="#features">Características</a>
+  <a href="#images">Imágenes</a>
+  <a href="#usage">Uso</a>
+  <a href="#examples">Ejemplos</a>
+  <a href="#license">Licencia</a>
+  <a href="#donar">❤️ Donar</a>
+</nav>
+
+<section id="about">
+  <h2>¿Qué es html2xlsx?</h2>
+  <div class="card">
+    <p><strong>html2xlsx</strong> es una herramienta de línea de comandos desarrollada en Python que convierte documentos HTML en archivos Excel (.xlsx).</p>
+    <p>Respeta la estructura del contenido original e incluye soporte para texto, listas, tablas complejas, imágenes y enlaces.</p>
+    <p>Está pensada para automatización, generación de informes y migración de contenido web a formatos Excel.</p>
+  </div>
+</section>
+
+<section id="features">
+  <h2>Características principales</h2>
+
+  <div class="card"><strong>📄 Texto estructurado</strong>: encabezados, párrafos y formato automático.</div>
+  <div class="card"><strong>📋 Listas</strong>: soporte completo para listas anidadas.</div>
+  <div class="card"><strong>📊 Tablas</strong>: compatibilidad con rowspan y colspan.</div>
+  <div class="card"><strong>🖼️ Imágenes</strong>: soporte para base64, HTTP y archivos locales.</div>
+  <div class="card"><strong>🔗 Enlaces</strong>: internos y externos.</div>
+  <div class="card"><strong>🎯 Layout avanzado</strong>: control total de imágenes y formato.</div>
+
+</section>
+
+<section id="images">
+  <h2>Motor avanzado de imágenes</h2>
+
+  <div class="card">
+    <p>html2xlsx incluye un sistema avanzado de maquetación de imágenes similar a CSS.</p>
+
+    <ul>
+      <li><strong>Alineación:</strong> left, center, right</li>
+      <li><strong>Escalado:</strong> contain, cover, stretch</li>
+      <li><strong>Fondo:</strong> color configurable</li>
+      <li><strong>Padding:</strong> separación vertical automática</li>
+      <li><strong>Bordes:</strong> solo exterior (sin rejilla)</li>
+    </ul>
+  </div>
+</section>
+
+<section id="usage">
+  <h2>Uso básico</h2>
+
+  <div class="card">
+    <p>Ejemplo de conversión:</p>
+
+    <pre>python html2xlsx.py archivo.html</pre>
+
+    <p>Opciones comunes:</p>
+
+    <pre>--columns 10
+--column-width 12
+--image-align center
+--image-background F8F8F8</pre>
+  </div>
+</section>
+
+<section id="examples">
+  <h2>Ejemplos</h2>
+
+  <div class="card">
+    <strong>Básico</strong>
+    <pre>python html2xlsx.py archivo.html</pre>
+  </div>
+
+  <div class="card">
+    <strong>Layout profesional</strong>
+    <pre>python html2xlsx.py archivo.html --image-align center --image-background F8F8F8 --image-border</pre>
+  </div>
+
+  <div class="card">
+    <strong>Sin imágenes</strong>
+    <pre>python html2xlsx.py archivo.html --no-images</pre>
+  </div>
+
+</section>
+
+<section id="license">
+  <h2>Licencia</h2>
+  <div class="card">
+    <p>Este proyecto es software libre bajo la <strong>GNU General Public License v3</strong>.</p>
+    <p>Puedes usarlo, modificarlo y redistribuirlo respetando los términos de la licencia.</p>
+  </div>
+</section>
+
+<section id="donar">
+  <h2>❤️ Donar</h2>
+  <p>Si este proyecto te resulta útil, puedes apoyar su desarrollo:</p>
+  <a href="https://paypal.me/atmarquez" target="_blank" class="btn">Donar con PayPal</a>
+</section>
+
+<section id="download">
+  <h2>Descarga</h2>
+  <p>Obtén la última versión desde GitHub:</p>
+  <a class="btn" href="https://github.com/atmarquez/html2xlsx/releases/latest">
+    Descargar html2xlsx
+  </a>
+</section>
+
+<footer>
+  <p>© 2026 Antonio Teodomiro Márquez Muñoz (Naidel)</p>
+  <p>GPL-3.0 License</p>
+</footer>
+
+</body>
+</html>
