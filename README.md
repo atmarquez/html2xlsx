@@ -1,3 +1,9 @@
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![License](https://img.shields.io/badge/license-GPLv3-green)
+![Version](https://img.shields.io/badge/version-1.0.0-orange)
+![Status](https://img.shields.io/badge/status-stable-brightgreen)
+![Platform](https://img.shields.io/badge/platform-windows%20%7C%20linux-lightgrey)
+
 # html2xlsx
 
 Convierte documentos HTML en archivos Excel (.xlsx) manteniendo su estructura original.
