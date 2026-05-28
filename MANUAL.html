@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Manual html2xlsx</title>
+<style>
+body { font-family: Arial; margin: 40px; max-width: 900px; line-height: 1.6; }
+h1,h2,h3{color:#2c3e50;}
+pre{background:#f4f4f4;padding:10px;border-radius:6px;}
+code{background:#eee;padding:2px 5px;}
+</style>
+</head>
+
+<body>
+
+<h1>📘 Manual de Usuario — html2xlsx</h1>
+
+<hr>
+
+<h2>🧭 Introducción</h2>
+<p>
+html2xlsx es una herramienta de línea de comandos diseñada para convertir documentos HTML en archivos Excel (.xlsx), manteniendo la estructura y la jerarquía del contenido original.
+</p>
+
+<p>
+Está pensada para transformar páginas HTML complejas en documentos Excel organizados, legibles y visualmente consistentes.
+</p>
+
+<hr>
+
+<h2>🎯 Objetivo</h2>
+
+<ul>
+<li>Convertir HTML en Excel estructurado</li>
+<li>Respetar jerarquía del contenido</li>
+<li>Soportar tablas complejas</li>
+<li>Gestionar imágenes correctamente</li>
+<li>Preservar enlaces</li>
+</ul>
+
+<hr>
+
+<h2>✅ Características principales</h2>
+
+<ul>
+<li>Párrafos y texto enriquecido</li>
+<li>Encabezados h1–h6</li>
+<li>Listas anidadas</li>
+<li>Tablas con rowspan y colspan</li>
+<li>Imágenes (base64, HTTP, locales)</li>
+<li>Enlaces internos y externos</li>
+<li>Sistema de layout avanzado</li>
+</ul>
+
+<hr>
+
+<h2>▶️ Uso básico</h2>
+
+<pre>python html2xlsx.py archivo.html</pre>
+
+<p>Genera automáticamente:</p>
+
+<pre>archivo.xlsx</pre>
+
+<hr>
+
+<h2>⚙️ Opciones generales</h2>
+
+<h3>--columns</h3>
+<p>Número de columnas utilizadas.</p>
+<pre>--columns 10</pre>
+
+<h3>--column-width</h3>
+<p>Ancho de columnas.</p>
+<pre>--column-width 12</pre>
+
+<h3>--no-images</h3>
+<p>Desactiva imágenes.</p>
+
+<h3>--no-tables</h3>
+<p>Desactiva tablas.</p>
+
+<h3>--no-links</h3>
+<p>Desactiva enlaces.</p>
+
+<hr>
+
+<h2>🖼️ Sistema avanzado de imágenes</h2>
+
+<h3>--image-max-width</h3>
+<pre>--image-max-width 800</pre>
+
+<h3>--image-max-height</h3>
+<pre>--image-max-height 400</pre>
+
+<h3>--image-fit</h3>
+
+<ul>
+<li><b>contain</b>: mantiene proporción</li>
+<li><b>cover</b>: rellena completamente</li>
+<li><b>stretch</b>: ajusta exactamente</li>
+</ul>
+
+<pre>--image-fit contain</pre>
+
+<h3>--image-padding</h3>
+<p>Espacio vertical en filas Excel.</p>
+<pre>--image-padding 2</pre>
+
+<h3>--image-background</h3>
+<pre>--image-background F8F8F8</pre>
+
+<h3>--image-align</h3>
+
+<ul>
+<li>left (default)</li>
+<li>center</li>
+<li>right</li>
+</ul>
+
+<pre>--image-align center</pre>
+
+<h3>--image-border</h3>
+<p>
+Añade un borde exterior sin rejilla interna alrededor del bloque de imagen.
+</p>
+
+<hr>
+
+<h2>🧱 Composición visual de imágenes</h2>
+
+<pre>
+python html2xlsx.py archivo.html --image-align center --image-background EEEEEE --image-padding 2 --image-border
+</pre>
+
+<p>
+Este comando genera un bloque visual tipo "card":
+- centrado  
+- con fondo  
+- con padding  
+- con borde limpio
+</p>
+
+<hr>
+
+<h2>📊 Renderizado en Excel</h2>
+
+<h3>Texto</h3>
+<ul>
+<li>Wrap automático</li>
+<li>Ajuste de altura dinámico</li>
+</ul>
+
+<h3>Encabezados</h3>
+<ul>
+<li>Tamaño adaptativo</li>
+<li>Bordes visuales</li>
+</ul>
+
+<h3>Listas</h3>
+<ul>
+<li>Soporte jerárquico</li>
+<li>Indentación progresiva</li>
+</ul>
+
+<h3>Tablas</h3>
+<ul>
+<li>Merge automático</li>
+<li>Bordes aplicados</li>
+<li>Altura ajustada</li>
+</ul>
+
+<h3>Imágenes</h3>
+<ul>
+<li>Escalado automático</li>
+<li>Posicionado horizontal</li>
+<li>Bloque visual configurable</li>
+</ul>
+
+<hr>
+
+<h2>🔗 Enlaces</h2>
+
+<ul>
+<li>Enlaces externos clicables</li>
+<li>Enlaces internos dentro del Excel</li>
+</ul>
+
+<hr>
+
+<h2>🧪 Ejemplos reales</h2>
+
+<h3>Básico</h3>
+<pre>python html2xlsx.py documento.html</pre>
+
+<h3>Sin imágenes</h3>
+<pre>python html2xlsx.py documento.html --no-images</pre>
+
+<h3>Layout profesional</h3>
+<pre>
+python html2xlsx.py documento.html --image-align center --image-background F8F8F8 --image-border
+</pre>
+
+<h3>Control de tamaño</h3>
+<pre>
+python html2xlsx.py documento.html --image-max-width 800 --image-max-height 400
+</pre>
+
+<hr>
+
+<h2>⚠️ Limitaciones</h2>
+
+<ul>
+<li>No soporta CSS completo</li>
+<li>No ejecuta JavaScript</li>
+<li>Posicionamiento basado en columnas</li>
+</ul>
+
+<hr>
+
+<h2>🛠️ Rendimiento</h2>
+
+<ul>
+<li>Depende del tamaño HTML</li>
+<li>Imágenes grandes aumentan tiempo</li>
+<li>Tablas complejas consumen memoria</li>
+</ul>
+
+<hr>
+
+<h2>📄 Licencia</h2>
+<p>GPL-3.0</p>
+
+<h2>👨‍💻 Autor</h2>
+<p>Antonio Teodomiro Márquez Muñoz (Naidel)</p>
+
+</body>
+</html>

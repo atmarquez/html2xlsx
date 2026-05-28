@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Manual html2xlsx</title>
+<style>
+body { font-family: Arial; margin: 40px; line-height: 1.6; }
+h1,h2,h3 { color:#2c3e50; }
+code { background:#f4f4f4; padding:2px 6px; }
+pre { background:#f4f4f4; padding:10px; }
+</style>
+</head>
+<body>
+
+<h1>📘 Manual de Usuario — html2xlsx</h1>
+
+<h2>Introducción</h2>
+<p>html2xlsx convierte documentos HTML en Excel (.xlsx) manteniendo estructura y formato.</p>
+
+<h2>Uso básico</h2>
+<pre>python html2xlsx.py archivo.html</pre>
+
+<h2>Opciones generales</h2>
+
+<h3>--columns</h3>
+<pre>--columns 10</pre>
+
+<h3>--column-width</h3>
+<pre>--column-width 12</pre>
+
+<h3>--no-images</h3>
+<pre>--no-images</pre>
+
+<h3>--no-tables</h3>
+<pre>--no-tables</pre>
+
+<h3>--no-links</h3>
+<pre>--no-links</pre>
+
+<h2>Opciones de imágenes</h2>
+
+<h3>--image-max-width</h3>
+<pre>--image-max-width 800</pre>
+
+<h3>--image-max-height</h3>
+<pre>--image-max-height 400</pre>
+
+<h3>--image-fit</h3>
+<p>contain | cover | stretch</p>
+
+<h3>--image-padding</h3>
+<pre>--image-padding 2</pre>
+
+<h3>--image-background</h3>
+<pre>--image-background FFFFFF</pre>
+
+<h3>--image-align</h3>
+<p>left | center | right</p>
+
+<h3>--image-border</h3>
+<p>Añade borde exterior</p>
+
+<h2>Ejemplos</h2>
+
+<h3>Básico</h3>
+<pre>python html2xlsx.py archivo.html</pre>
+
+<h3>Layout profesional</h3>
+<pre>python html2xlsx.py archivo.html --image-align center --image-background F8F8F8 --image-border</pre>
+
+<h3>Sin imágenes</h3>
+<pre>python html2xlsx.py archivo.html --no-images</pre>
+
+<h2>Notas</h2>
+<ul>
+<li>Excel generado automáticamente</li>
+<li>Imágenes ajustadas al layout</li>
+<li>Compatible con tablas complejas</li>
+</ul>
+
+<h2>Autor</h2>
+<p>Antonio Teodomiro Márquez Muñoz (Naidel)</p>
+
+</body>
+</html>
