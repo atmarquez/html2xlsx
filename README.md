@@ -8,6 +8,12 @@
 
 Convierte documentos HTML en archivos Excel (.xlsx) manteniendo su estructura original.
 
+## 📘 Manual completo
+
+Consulta el manual completo de uso:
+
+👉 [Ver manual](MANUAL.html)
+
 ## ✨ Características
 
 - ✅ Encabezados y párrafos
